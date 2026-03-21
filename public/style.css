@@ -28,20 +28,28 @@ main {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-top: #ffd801 4px solid;
+  padding: 10px 0;
+  background-color: #003A8F;
+  border-top: #003A8F 4px solid;
 }
 
 header nav {
-  margin-left: 20px;
+  margin-left: 12px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  padding: 6px 20px;
+  border-radius: 6px;
 }
 
 .logo {
-  width: 50px;
-  height: 50px;
+  width: 60x;
+  height: 60px;
 }
 
 .title {
@@ -93,7 +101,7 @@ header nav {
   width: 100%;
   border-radius: 5px;
   border: #333 solid 1px;
-  border-bottom: 8px solid #ffd801;
+  border-bottom: 8px solid #003A8F;
   padding: 1rem;
 }
 
@@ -164,11 +172,16 @@ input {
   cursor: pointer;
   width: 100%;
   padding: 10px 30px;
-  background-color: #ffd801;
+  background-color: #003A8F;
   border-radius: 30px;
   border: none;
   font-size: 1.2rem;
-  color: #1c3aff;
+  color: #ffffff;
+}
+
+.btn:hover,
+.modal-btn:hover {
+  background-color: #002f73; /* slightly darker blue */
 }
 
 .btn-2 {
@@ -240,8 +253,8 @@ footer ul {
   padding: 0.6rem 1.4rem;
   border: none;
   border-radius: 30px;
-  background: #ffd801;
-  color: #1c3aff;
+  background: #003A8F;
+  color: #ffffff;
   cursor: pointer;
 }
 
