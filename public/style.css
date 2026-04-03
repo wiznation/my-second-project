@@ -351,3 +351,9 @@ footer ul {
     align-items: center;
   }
 }
+
+/* ===== HEADER TEXT VERTICAL ALIGNMENT FIX ===== */
+.title {
+  position: relative;
+  top: -6px; /* adjust this value to perfectly align with logo */
+}
