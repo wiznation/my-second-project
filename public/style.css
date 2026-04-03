@@ -33,7 +33,7 @@ main {
   align-items: center;
 }
 
-/* ===== HEADER (TRIMMED) ===== */
+/* ===== HEADER (TRIMMED + LOGO ALIGNMENT FIX) ===== */
 header {
   padding: 6px 0;
   background-color: #003A8F;
@@ -42,7 +42,7 @@ header {
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: center; /* vertical centering */
   gap: 10px;
   background-color: #ffffff;
   width: 90%;
@@ -53,14 +53,16 @@ header {
 }
 
 .logo {
-  width: 45px;
-  height: 45px;
+  width: 55px;   /* increased size */
+  height: 55px;
+  object-fit: contain; /* keeps aspect ratio */
 }
 
 .title {
   font-size: 20px;
   color: #333;
   font-weight: normal;
+  line-height: 55px; /* aligns text with logo */
 }
 
 .title-2 {
@@ -306,6 +308,7 @@ footer ul {
 
   .title {
     font-size: 18px;
+    line-height: 45px; /* adjust for smaller logo in mobile */
   }
 
   .title-2 {
