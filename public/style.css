@@ -35,7 +35,7 @@ main {
 
 /* ===== HEADER (TRIMMED + LOGO ALIGNMENT FIX) ===== */
 header {
-  padding: 6px 0;
+  padding: 4px 0; /* reduced from 6px */
   background-color: #003A8F;
   border-top: 3px solid #003A8F;
 }
@@ -48,12 +48,12 @@ header {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 6px 16px;
+  padding: 4px 16px; /* reduced from 6px */
   border-radius: 6px;
 }
 
 .logo {
-  width: 55px;   /* increased size */
+  width: 55px;   /* same as before */
   height: 55px;
   object-fit: contain; /* keeps aspect ratio */
 }
@@ -62,7 +62,7 @@ header {
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  line-height: 55px; /* aligns text with logo */
+  line-height: 55px; /* keeps vertical alignment with logo */
 }
 
 .title-2 {
