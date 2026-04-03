@@ -33,36 +33,34 @@ main {
   align-items: center;
 }
 
-/* ===== HEADER (TRIMMED + LOGO ALIGNMENT FIX) ===== */
+/* ===== HEADER (TRIMMED) ===== */
 header {
-  padding: 4px 0; /* reduced from 6px */
+  padding: 6px 0;
   background-color: #003A8F;
   border-top: 3px solid #003A8F;
 }
 
 .header-inner {
   display: flex;
-  align-items: center; /* vertical centering */
+  align-items: center;
   gap: 10px;
   background-color: #ffffff;
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 4px 16px; /* reduced from 6px */
+  padding: 6px 16px;
   border-radius: 6px;
 }
 
 .logo {
-  width: 55px;   /* same as before */
-  height: 55px;
-  object-fit: contain; /* keeps aspect ratio */
+  width: 45px;
+  height: 45px;
 }
 
 .title {
   font-size: 20px;
   color: #333;
   font-weight: normal;
-  line-height: 55px; /* keeps vertical alignment with logo */
 }
 
 .title-2 {
@@ -308,7 +306,6 @@ footer ul {
 
   .title {
     font-size: 18px;
-    line-height: 45px; /* adjust for smaller logo in mobile */
   }
 
   .title-2 {
