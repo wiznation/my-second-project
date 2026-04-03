@@ -1,48 +1,33 @@
-/* ===== RESET ===== */
+/* ===== Reset & Base ===== */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
-}
-
-body {
-  font-family: Arial, sans-serif;
+  font-family: serif;
   display: flex;
   flex-direction: column;
-  background-color: #eaeaea;
+  line-height: 1.5;
 }
 
-/* ===== LINKS ===== */
 a {
   text-decoration: none;
   color: #fff;
 }
 
-/* ===== MAIN LAYOUT ===== */
-main {
-  flex: 1;
-  padding: 40px 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ===== HEADER (TRIMMED) ===== */
+/* ===== Header ===== */
 header {
-  padding: 6px 0;
   background-color: #003A8F;
-  border-top: 3px solid #003A8F;
+  padding: 6px 0;
+  border-top: 4px solid #003A8F;
 }
 
 .header-inner {
   display: flex;
-  align-items: center;
+  align-items: center; /* vertical centering */
   gap: 10px;
   background-color: #ffffff;
   width: 90%;
@@ -55,113 +40,80 @@ header {
 .logo {
   width: 45px;
   height: 45px;
+  display: block;
 }
 
 .title {
   font-size: 20px;
   color: #333;
   font-weight: normal;
+  line-height: 1; /* remove extra spacing */
+  display: flex;
+  align-items: center;
 }
 
-.title-2 {
-  font-size: 1.6rem;
-  font-weight: 300;
-  text-align: left;
+/* ===== Main Section ===== */
+main {
+  flex: 1;
+  padding: 30px;
+  background-color: #eaeaea;
 }
 
-/* ===== CARD ===== */
 .card {
-  text-align: left;
-  width: 100%;
-  max-width: 420px;
+  text-align: center;
+  width: 40%;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #fff;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
 }
 
-/* ===== BANNER (ICON + TEXT SPACING FIXED) ===== */
+/* Hazard Box */
 .banner {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 12px;
+  justify-content: center;
   width: 100%;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  border-bottom: 5px solid #003A8F;
-  padding: 1rem;
-  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  border: #333 solid 1px;
+  border-bottom: 6px solid #003A8F;
+  padding: 12px;
+  gap: 12px; /* space between hazard icon and text */
 }
 
-.warning {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
+.banner-text h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem; /* reduced spacing */
 }
 
-/* ===== TEXT SPACING (TIGHTENED) ===== */
-.title-confirm {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-align: center;
-  padding: 1.2rem 0 1rem 0;
-  margin-bottom: 0.5rem;
+.banner-text p {
+  font-size: 1rem;
+  margin-top: 0; /* tighten spacing */
 }
 
-.secure-text {
-  font-size: 1.1rem;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-
-.bold {
-  font-weight: 900;
-}
-
-/* ===== FORM ===== */
+/* ===== Form ===== */
 form {
-  margin-top: 1.5rem;
+  margin: 2rem 0 0 0;
 }
 
-/* ===== INPUTS ===== */
-input {
-  width: 100%;
-  margin-bottom: 16px;
-  border-radius: 8px;
-  padding: 14px 44px 14px 14px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 20px;
-  outline: none;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus {
-  border-color: #003A8F;
-  box-shadow: 0 0 0 2px rgba(0, 58, 143, 0.1);
-}
-
-.input-email {
-  background-image: url("./assests/images/pen.png");
-}
-
-/* ===== INPUT WRAPPERS ===== */
 .input-wrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 20px;
 }
 
-.password-wrapper {
-  display: flex;
-  align-items: center;
-  position: relative;
+input {
+  width: 100%;
+  padding: 12px 44px 12px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 40px;
 }
 
-/* ===== TOGGLE PASSWORD ===== */
 .toggle-password {
   position: absolute;
   top: 50%;
@@ -172,73 +124,60 @@ input:focus {
   cursor: pointer;
 }
 
-.toggle-password img {
-  width: 20px;
-  height: 20px;
-}
-
-#toggle {
-  position: absolute;
-  right: 12px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 24px;
-}
-
-/* ===== BUTTONS ===== */
 .btn {
-  cursor: pointer;
   width: 100%;
-  padding: 12px;
-  background-color: #003A8F;
-  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
   border: none;
-  font-size: 1rem;
-  color: #ffffff;
-  transition: all 0.2s ease;
+  color: #fff;
+  background-color: #003A8F;
+  cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.modal-btn:hover {
   background-color: #002f73;
-  transform: translateY(-1px);
 }
 
 .btn-2 {
-  cursor: pointer;
-  width: 100%;
-  margin-top: 8px;
-  padding: 10px;
-  border-radius: 25px;
+  width: 30%;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 30px;
   border: none;
   background-color: transparent;
-  font-size: 0.95rem;
-  color: #003A8F;
+  color: #1c3aff;
 }
 
-/* ===== FOOTER ===== */
+/* ===== Footer ===== */
 footer {
   padding: 20px 0;
   width: 100%;
+  margin: 0 auto;
   background-color: #787777;
   color: #ffffff;
+  height: auto;
 }
 
 footer ul {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 20px;
   list-style: none;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  align-items: center;
+  padding: 0 6rem;
 }
 
-/* ===== MODAL ===== */
+footer ul li a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* ===== Modal Overlay ===== */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(6px);
   display: none;
   align-items: center;
@@ -253,27 +192,27 @@ footer ul {
   width: 90%;
   max-width: 420px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
   animation: scaleIn 0.25s ease-in-out;
 }
 
 .modal-box h2 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.75rem;
   font-size: 1.4rem;
 }
 
 .modal-box p {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
 .modal-btn {
   padding: 0.6rem 1.4rem;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   background: #003A8F;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -281,73 +220,38 @@ footer ul {
   opacity: 0.9;
 }
 
-/* ===== ANIMATION ===== */
+/* ===== Animations ===== */
 @keyframes scaleIn {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== Media Queries ===== */
+@media (max-width: 1024px) {
+  main { padding: 25px; }
+  .card { width: 60%; padding: 1.2rem; }
+  footer ul { padding: 0 4rem; }
+}
+
 @media (max-width: 768px) {
-  main {
-    padding: 20px 10px;
-  }
-
-  .card {
-    max-width: 90%;
-    padding: 1.5rem;
-  }
-
-  .title {
-    font-size: 18px;
-  }
-
-  .title-2 {
-    font-size: 1.4rem;
-  }
-
-  .secure-text {
-    font-size: 1rem;
-  }
-
-  footer ul {
-    padding: 0 20px;
-  }
+  header nav { margin-left: 0; margin-top: 10px; }
+  main { padding: 20px; }
+  .card { width: 80%; }
+  .title { font-size: 18px; }
+  .btn-2 { width: 50%; }
+  footer ul { padding: 0 2rem; }
 }
 
 @media (max-width: 480px) {
-  .logo {
-    width: 40px;
-    height: 40px;
-  }
-
-  .card {
-    max-width: 100%;
-    padding: 1.2rem;
-  }
-
-  .banner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  input {
-    font-size: 14px;
-  }
-
-  .btn {
-    font-size: 0.95rem;
-  }
-
-  footer ul {
-    flex-direction: column;
-    align-items: center;
-  }
+  header { padding: 12px 0; }
+  .logo { width: 35px; height: 35px; }
+  .title { font-size: 16px; }
+  main { padding: 15px; }
+  .card { width: 100%; padding: 1rem; border-radius: 8px; }
+  .banner { flex-direction: column; text-align: center; gap: 8px; }
+  .banner-text h2 { font-size: 1.3rem; }
+  .banner-text p { font-size: 0.95rem; }
+  .btn { font-size: 1rem; padding: 8px; }
+  .btn-2 { width: 100%; font-size: 1rem; }
+  footer ul { flex-direction: column; gap: 8px; padding: 0; }
 }
